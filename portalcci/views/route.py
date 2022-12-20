@@ -1,16 +1,10 @@
-from portalcci import app
+from __init__ import app
 from flask import render_template, request
 
 
 # Rotas principais
 @app.route('/')
 def home():
-    return render_template(
-        r'base.html'
-    )
-
-@app.route('/home')
-def homepage():
     return render_template(
         r'homepage.html'
     )
@@ -114,4 +108,10 @@ def inicio():
 def secretaria():
     return render_template(
         r'secretaria.html'
+    )
+
+@app.route('/fale_conosco')
+def fale_conosco():
+    return render_template(
+        r'fale-conosco.html'
     )
